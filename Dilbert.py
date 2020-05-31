@@ -19,6 +19,3 @@ def dilbert_days_ago(fromDaysAgo):
 	return dilbert_from_date(datetime.datetime.now() - datetime.timedelta(days=fromDaysAgo))
 
 print(dilbert(5))
-response = requests.get(dilbert(5 ))
-dilbert = Image.open(io.BytesIO(response.content))
-dilbert.show()
