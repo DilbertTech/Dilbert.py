@@ -18,4 +18,3 @@ def dilbert_from_date(dateToFetch):
 def dilbert_days_ago(fromDaysAgo):
 	return dilbert_from_date(datetime.datetime.now() - datetime.timedelta(days=fromDaysAgo))
 
-print(dilbert(5))
