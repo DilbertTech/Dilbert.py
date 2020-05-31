@@ -1,6 +1,6 @@
 import requests
-from dilbert import *
+import dilbert
 import datetime
-response = requests.get(dilbert_from_date(datetime.datetime.now()))
+response = requests.get(dilbert.dilbert_from_date(datetime.datetime.now()))
 dilbertimg = Image.open(io.BytesIO(response.content))
 dilbertimg.show()
