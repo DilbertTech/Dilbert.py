@@ -5,6 +5,7 @@ import io
 import datetime
 import urllib
 from PIL import Image
+from randomtimestamp import randomtimestamp
 
 def dilbert_from_date(dateToFetch):
     formatted_date = '{0}-{1}-{2}'.format(dateToFetch.year, dateToFetch.month, dateToFetch.day)
@@ -17,3 +18,5 @@ def dilbert_from_date(dateToFetch):
 def dilbert_days_ago(fromDaysAgo):
 	return dilbert_from_date(datetime.datetime.now() - datetime.timedelta(days=fromDaysAgo))
 
+def dilbert_random():
+	return dilbert_from_date(randomtimestamp(1990, False))
