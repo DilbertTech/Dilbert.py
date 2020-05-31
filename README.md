@@ -9,11 +9,7 @@
   `dilbert_days_ago(fromDaysAgo)`
   Fetches the Dilbert from `fromDaysAgo` amount of days ago.
   `fromDaysAgo` is a number
-
-  `dilbert_days_ago(fromDaysAgo)`
-  Fetches the Dilbert from `fromDaysAgo` amount of days ago.
-  `fromDaysAgo` is a number
-
+  
   `dilbert_random()`
   Returns a random Dilbert
 
