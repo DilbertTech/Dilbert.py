@@ -15,7 +15,10 @@ def dilbert_from_date(dateToFetch):
     link = dilbert_page_source.find("img", class_='img-comic')['src']
     return "https:" + str(link)
 
-print(dilbert_from_date(datetime.datetime.now()))
-response = requests.get(dilbert_from_date(datetime.datetime.now()))
+def dilbert_days_ago(fromDaysAgo):
+	return dilbert_from_date(datetime.datetime.now() - datetime.timedelta(days=fromDaysAgo))
+
+print(dilbert(5))
+response = requests.get(dilbert(5 ))
 dilbert = Image.open(io.BytesIO(response.content))
 dilbert.show()
