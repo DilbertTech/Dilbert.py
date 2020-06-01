@@ -1,28 +1,22 @@
-import pathlib
-from setuptools import setup
+import setuptools
 
-# The directory containing this file
-HERE = pathlib.Path(__file__).parent
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-# The text of the README file
-README = (HERE / "README.md").read_text()
-
-# This call to setup() does all the work
-setup(
-    name="dilbert",
+setuptools.setup(
+    name="dilbert", # Replace with your own username
     version="1.0.0",
-    description="Get the latest Dilbert comics.",
-    long_description=README,
+    author="John Atkinson",
+    description="A Python library for the Dilbert comic strip.",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/DilbertTech/Dilbert.py",
-    author="John Atkinson",
-    license="MIT",
+    packages=setuptools.find_packages(),
+    install_requires=["install", "requests", "BeautifulSoup4", "randomtimestamp"],
     classifiers=[
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
-    packages=["dilbert"],
-    include_package_data=True,
-    install_requires=["requests", "BeautifulSoup4", "randomtimestamp"],
+    python_requires='>=3.6',
 )
